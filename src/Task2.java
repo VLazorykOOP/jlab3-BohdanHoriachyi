@@ -7,7 +7,9 @@ abstract class Function {
 
     public abstract double calculate(double x);
 
-    public abstract void printResult(double x);
+    public void printResult(double x) {
+        System.out.println("Function : ");
+    };
 
     @Override
     public abstract String toString();
@@ -60,6 +62,7 @@ class Hyperbola extends Function {
 
     @Override
     public void printResult(double x) {
+        super.printResult(x);
         System.out.println("Гіпербола: обчислення для x = " + x + " дає y = " + calculate(x));
     }
 
